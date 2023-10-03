@@ -1,0 +1,134 @@
+*,
+::before,
+::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.todo-list{
+    width: 100%;
+    max-width: 550px;
+    background-color: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-list h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    margin-bottom: 20px;
+
+}
+
+.todo-list h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.add-task{
+    width: 100%;
+    background-color: #edeef0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 30px;
+    margin-bottom: 25px;
+    padding-left: 20px ;
+
+}
+
+.add-task input{
+    all: unset;
+    width: 100%;
+    padding: 
+    10px;
+
+}
+
+.add-task input::placeholder{
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.add-task button{
+    all: unset;
+    color: #fff;
+    padding: 16px 50px ;
+    background-color: #ff5945;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+ul li{
+    min-width: max-content;
+    color: #ff5945;
+
+    font-weight: 600;
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    background-color: #edeef0;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-image: url(image/radio.png);
+    background-position: center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+
+}
+
+ul li.checked::before{
+    width: 28px;
+    height: 28px;
+    background-image: url(image/check.png);
+    background-position: center;
+    background-size: cover;
+}
+
+ul li span{
+    color: #ff5945;
+    position: absolute;
+    right: 0;
+    top: 2px;
+    font-size: 22px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 10px;
+    transition: all 200ms ease-in-out;
+}
+
+ul li span:hover{
+    transform: scale(1.5);
+}
